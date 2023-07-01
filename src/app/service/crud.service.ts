@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,11 @@ import { Injectable } from '@angular/core';
 })
 export class CrudService {
 
-  constructor() { }
+  serviceURL: string;
+
+  constructor(private http: HttpClientModule) {
+    this.serviceURL = "http://localhost3000/tasks"
+  }
+
+  
 }
